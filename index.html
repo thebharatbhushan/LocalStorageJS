@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bharat Tutorial</title>
+    <style></style>
+  </head>
+  <body>
+    <input type="text" id="text1" />
+    <input type="button" id="btn1" value="Done" onclick="bharat()" />
+    <h2 id="show"></h2>
+    <script>
+      var demo;
+      var demo2;
+      function bharat() {
+        demo = document.getElementById("text1").value;
+        localStorage.setItem("name1", demo);
+        demo2 = localStorage.getItem("name1");
+        console.log(demo2);
+        document.getElementById("show").innerHTML = "Welcome " + demo2 + "!";
+      }
+      demo2 = localStorage.getItem("name1");
+      console.log(demo2);
+      document.getElementById("show").innerHTML = "Welcome " + demo2 + "!";
+    </script>
+  </body>
+</html>
